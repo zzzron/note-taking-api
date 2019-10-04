@@ -1,4 +1,12 @@
 import express from "express";
+import mongoose from "mongoose";
+
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost/notetaking_db", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
 const app = express();
 const PORT = 4300;
 
